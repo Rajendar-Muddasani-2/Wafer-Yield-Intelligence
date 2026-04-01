@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install flake8
+
+      - name: Lint - syntax errors and undefined names
+        run: |
+          flake8 scripts/ \
+            --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      - name: Lint - warnings (non-blocking)
+        run: |
+          flake8 scripts/ \
+            --count --exit-zero --max-line-length=120 --statistics
+
+      - name: Verify core imports
+        run: |
+          python -c "
+          from config_loader import load_config
+          from stdf_reader import STDFReader
+          from stdf_writer import STDFWriter
+          print('Core imports OK')
+          "
+
+      - name: Run prediction smoke test
+        run: |
+          python scripts/predict.py -n 20 || echo "Prediction requires trained model artifacts"

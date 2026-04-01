@@ -1,0 +1,19 @@
+{
+  "retest_prediction": {
+    "model": "VotingClassifier(KNN + RandomForest + MLP)",
+    "cv_accuracy_mean": 0.708,
+    "cv_accuracy_std": 0.006828250141873846,
+    "test_accuracy": 0.709,
+    "n_test": 1000,
+    "n_features": 28
+  },
+  "pattern_recognition": {
+    "model": "VotingEnsemble(GradientBoosting + MLP)",
+    "cv_accuracy_mean": 1.0,
+    "cv_accuracy_std": 0.0,
+    "test_accuracy": 1.0,
+    "n_test": 180,
+    "n_features": 59,
+    "n_classes": 9
+  }
+}

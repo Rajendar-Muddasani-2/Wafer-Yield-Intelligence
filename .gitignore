@@ -1,0 +1,94 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model artifacts
+*.h5
+*.pkl
+*.joblib
+*.pt
+*.pth
+models/*.pt
+models/*.h5
+
+# Data files (large datasets)
+data/*.csv
+data/*.parquet
+data/*.json
+*.csv
+*.parquet
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Credentials and secrets
+credentials.json
+secrets.yaml
+config.ini
+
+# Neo4j specific
+neo4j/data/
+neo4j/logs/
+
+# MLflow
+mlruns/
+mlflow/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS specific
+Thumbs.db
+.DS_Store
+
+# Shared dataset directory (WM-811K etc — download separately)
+data_shared/

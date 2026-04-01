@@ -1,0 +1,9 @@
+{
+  "n_wafers": 90,
+  "pattern_distribution": {
+    "Local": 20,
+    "none": 70
+  },
+  "retest_pass_rate": 0.0,
+  "pattern_accuracy": 0.1111
+}

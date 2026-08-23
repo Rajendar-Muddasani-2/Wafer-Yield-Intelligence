@@ -2,7 +2,7 @@
   "retest_prediction": {
     "model": "VotingClassifier(KNN + RandomForest + MLP)",
     "cv_accuracy_mean": 0.708,
-    "cv_accuracy_std": 0.006828250141873846,
+    "cv_accuracy_std": 0.006642665127793231,
     "test_accuracy": 0.709,
     "n_test": 1000,
     "n_features": 28

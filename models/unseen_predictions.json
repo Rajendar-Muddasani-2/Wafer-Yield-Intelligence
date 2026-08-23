@@ -1,9 +1,16 @@
 {
   "n_wafers": 90,
   "pattern_distribution": {
-    "Local": 20,
-    "none": 70
+    "Center": 10,
+    "Donut": 10,
+    "Edge-Local": 10,
+    "Edge-Ring": 10,
+    "Local": 10,
+    "Near-full": 10,
+    "Random": 10,
+    "Scratch": 10,
+    "none": 10
   },
-  "retest_pass_rate": 0.0,
-  "pattern_accuracy": 0.1111
+  "retest_pass_rate": 0.8889,
+  "pattern_accuracy": 1.0
 }

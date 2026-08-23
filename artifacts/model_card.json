@@ -1,0 +1,46 @@
+{
+  "model_id": "wafer-yield-intelligence-v1",
+  "created": "2026-08-23",
+  "data": {
+    "type": "synthetic",
+    "pattern_samples": 900,
+    "pattern_classes": 9,
+    "retest_samples": 5000,
+    "retest_features": 28,
+    "pattern_features": 59,
+    "train_test_split": "80/20 stratified",
+    "cross_validation": "5-fold stratified"
+  },
+  "pattern_recognition": {
+    "model": "VotingEnsemble(GradientBoosting + MLP)",
+    "cv_accuracy_mean": 1.0,
+    "cv_accuracy_std": 0.0,
+    "test_accuracy": 1.0,
+    "n_test": 180,
+    "n_features": 59,
+    "n_classes": 9,
+    "classes": ["none","Center","Donut","Edge-Local","Edge-Ring","Local","Random","Scratch","Near-full"]
+  },
+  "retest_prediction": {
+    "model": "VotingClassifier(KNN + RandomForest + MLP)",
+    "cv_accuracy_mean": 0.708,
+    "cv_accuracy_std": 0.0066,
+    "test_accuracy": 0.709,
+    "n_test": 1000,
+    "n_features": 28
+  },
+  "inference_latency": {
+    "pattern_batch_ms": 3.476,
+    "pattern_per_wafer_ms": 0.039,
+    "retest_batch_ms": 2609.054,
+    "retest_per_wafer_ms": 28.989,
+    "n_wafers": 90,
+    "note": "model.predict() wall-clock only; excludes feature extraction and DB I/O"
+  },
+  "unseen_holdout": {
+    "n_wafers": 90,
+    "pattern_accuracy": 1.0,
+    "retest_pass_rate": 0.8889,
+    "seed": 777
+  }
+}

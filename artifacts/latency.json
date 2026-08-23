@@ -1,0 +1,8 @@
+{
+  "n_wafers": 90,
+  "pattern_inference_ms": 3.476,
+  "retest_inference_ms": 2609.054,
+  "pattern_per_wafer_ms": 0.039,
+  "retest_per_wafer_ms": 28.989,
+  "note": "Wall-clock time for model.predict() only; excludes feature extraction and DB I/O"
+}

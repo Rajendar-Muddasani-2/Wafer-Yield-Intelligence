@@ -43,20 +43,17 @@ env/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Model artifacts
-*.h5
-*.pkl
-*.joblib
-*.pt
-*.pth
-models/*.pt
+# Model binaries (regenerate with: python scripts/train_pipeline.py)
+models/*.joblib
+models/*.pkl
 models/*.h5
+models/*.pt
+models/*.pth
 
-# Data files (large datasets)
+# Large data files
 data/*.csv
 data/*.parquet
 data/*.json
-*.csv
 *.parquet
 
 # Logs
@@ -72,14 +69,6 @@ logs/
 credentials.json
 secrets.yaml
 config.ini
-
-# Neo4j specific
-neo4j/data/
-neo4j/logs/
-
-# MLflow
-mlruns/
-mlflow/
 
 # Temporary files
 tmp/
